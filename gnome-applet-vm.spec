@@ -1,6 +1,6 @@
 %define	name	gnome-applet-vm
 %define	version	0.1.2
-%define	release	%mkrel 2
+%define	release	%mkrel 3
 
 Name:		%{name}
 Version:	%{version}
@@ -33,7 +33,7 @@ locally-running virtual machines.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure --enable-consolehelper
+%configure2_5x --enable-consolehelper
 %make
 
 %install
