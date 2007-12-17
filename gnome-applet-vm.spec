@@ -23,7 +23,6 @@ Requires:	    usermode
 Requires:	    virt-manager
 Requires(post):		scrollkeeper >= 0.3
 Requires(postun):   scrollkeeper >= 0.3
-BuildRoot:           %{_tmppath}/%{name}-%{version}
 
 %description
 The gnome-applet-vm is GNOME panel applet for monitoring and controlling 
