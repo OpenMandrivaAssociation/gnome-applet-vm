@@ -44,7 +44,7 @@ make install DESTDIR=%{buildroot}
 unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
 # Clean up unpackaged files
-rm -rf %{buildroot}%{_localstatedir}/scrollkeeper
+rm -rf %{buildroot}%{_localstatedir}/lib/scrollkeeper
 # userhelper
 mkdir -p %{buildroot}/%{_bindir}
 ln -s consolehelper %{buildroot}/%{_bindir}/vm_applet_wrapper
