@@ -1,6 +1,7 @@
 %define	name	gnome-applet-vm
-%define	version	0.1.2
-%define	release	%mkrel 5
+%define	version	0.2.0
+%define	beta    rc1
+%define	release	%mkrel 0.%{beta}.1
 
 Name:		%{name}
 Version:	%{version}
@@ -9,8 +10,7 @@ Summary:    Simple virtual domains monitor
 License:    GPL
 Group:      Graphical desktop/GNOME
 URL:        http://people.redhat.com/kzak/gnome-applet-vm
-Source:     http://people.redhat.com/kzak/gnome-applet-vm/%{name}-%{version}.tar.bz2
-
+Source:     http://people.redhat.com/kzak/gnome-applet-vm/v0.2/%{name}-%{version}-%{beta}.tar.bz2
 BuildRequires:  libvirt-devel
 BuildRequires:  gnome-panel-devel >= 2.5.91
 BuildRequires:  gnome-doc-utils
@@ -30,7 +30,7 @@ The gnome-applet-vm is GNOME panel applet for monitoring and controlling
 locally-running virtual machines.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{version}-%{beta}
 
 %build
 %configure2_5x --enable-consolehelper
@@ -64,7 +64,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root)
-%doc AUTHORS COPYING ChangeLog NEWS README
+%doc AUTHORS COPYING NEWS README TODO COPYING-DOCS
 %{_datadir}/pixmaps/vm-applet
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/gnome/help/*
