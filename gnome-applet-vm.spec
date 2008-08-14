@@ -13,6 +13,7 @@ URL:        http://people.redhat.com/kzak/gnome-applet-vm
 Source:     http://people.redhat.com/kzak/gnome-applet-vm/v0.2/%{name}-%{version}-%{beta}.tar.bz2
 BuildRequires:  libvirt-devel
 BuildRequires:  gnome-panel-devel >= 2.5.91
+BuildRequires:  libglade2-devel
 BuildRequires:  gnome-doc-utils
 BuildRequires:  perl-XML-Parser
 BuildRequires:  pkgconfig
