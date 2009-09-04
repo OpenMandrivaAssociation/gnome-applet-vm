@@ -1,7 +1,7 @@
 %define	name	gnome-applet-vm
 %define	version	0.2.0
 %define	beta    rc1
-%define	release	%mkrel 0.%{beta}.1
+%define	release	%mkrel 0.%{beta}.2
 
 Name:		%{name}
 Version:	%{version}
