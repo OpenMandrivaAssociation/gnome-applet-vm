@@ -15,6 +15,7 @@ BuildRequires:  libvirt-devel
 BuildRequires:  gnome-panel-devel >= 2.5.91
 BuildRequires:  libglade2-devel
 BuildRequires:  gnome-doc-utils
+BuildRequires:  gnomeui2-devel libgnome2-devel
 BuildRequires:  perl-XML-Parser
 BuildRequires:  pkgconfig
 BuildRequires:  libxslt-proc
