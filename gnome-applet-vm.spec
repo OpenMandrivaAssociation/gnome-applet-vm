@@ -1,7 +1,7 @@
 %define	name	gnome-applet-vm
 %define	version	0.2.0
 %define	beta    rc1
-%define	release	%mkrel 0.%{beta}.2
+%define	release	%mkrel 0.%{beta}.3
 
 Name:		%{name}
 Version:	%{version}
@@ -11,6 +11,7 @@ License:    GPL
 Group:      Graphical desktop/GNOME
 URL:        http://people.redhat.com/kzak/gnome-applet-vm
 Source:     http://people.redhat.com/kzak/gnome-applet-vm/v0.2/%{name}-%{version}-%{beta}.tar.bz2
+Patch:      gnome-applet-vm-0.2.0-rc1-fix-format-errors.patch
 BuildRequires:  libvirt-devel
 BuildRequires:  gnome-panel-devel >= 2.5.91
 BuildRequires:  libglade2-devel
@@ -33,8 +34,11 @@ locally-running virtual machines.
 
 %prep
 %setup -q -n %{name}-%{version}-%{beta}
+%patch -p 1
 
 %build
+export CPPFLAGS="$CPPFLAGS -I %{_includedir}/libgnomeui-2.0"
+export LDFLAGS="$LDFLAGS -lgnomeui-2"
 %configure2_5x --enable-consolehelper
 %make
 
