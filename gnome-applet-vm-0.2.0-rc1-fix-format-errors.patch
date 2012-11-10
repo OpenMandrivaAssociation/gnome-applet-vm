@@ -1,0 +1,12 @@
+diff -Naur -x '*~' gnome-applet-vm-0.2.0-rc1/src/gtkutils.c gnome-applet-vm-0.2.0-rc1-fix-format-errors/src/gtkutils.c
+--- gnome-applet-vm-0.2.0-rc1/src/gtkutils.c	2008-03-03 10:35:39.000000000 +0100
++++ gnome-applet-vm-0.2.0-rc1-fix-format-errors/src/gtkutils.c	2009-09-13 19:25:25.000000000 +0200
+@@ -155,7 +155,7 @@
+     _F();
+ 
+     dialog = gtk_message_dialog_new( NULL, 0, GTK_MESSAGE_ERROR,
+-                                     GTK_BUTTONS_OK, msg);
++                                     GTK_BUTTONS_OK, "%s", msg);
+ 
+     gtk_window_set_screen(GTK_WINDOW (dialog),
+                            gtk_widget_get_screen (applet));
