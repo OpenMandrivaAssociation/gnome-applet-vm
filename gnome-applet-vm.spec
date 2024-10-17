@@ -9,7 +9,7 @@ Release:	%{release}
 Summary:    Simple virtual domains monitor
 License:    GPL
 Group:      Graphical desktop/GNOME
-URL:        http://people.redhat.com/kzak/gnome-applet-vm
+URL:        https://people.redhat.com/kzak/gnome-applet-vm
 Source:     http://people.redhat.com/kzak/gnome-applet-vm/v0.2/%{name}-%{version}-%{beta}.tar.bz2
 Patch:      gnome-applet-vm-0.2.0-rc1-fix-format-errors.patch
 BuildRequires:  libvirt-devel
